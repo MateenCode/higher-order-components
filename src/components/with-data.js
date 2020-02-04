@@ -13,7 +13,11 @@ const withData = (WrappedComponent, dataSource) => {
     }
 
     render() {
-      return <WrappedComponent data={this.state.data} {...this.props} />;
+      return this.state.data.length < 1 ? (
+        <h1>LOADING</h1>
+      ) : (
+        <WrappedComponent data={this.state.data} {...this.props} />
+      );
     }
   }
 
