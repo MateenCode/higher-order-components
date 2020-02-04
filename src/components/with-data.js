@@ -14,7 +14,6 @@ const withData = WrappedComponent => {
 
     render() {
       const { dataSource, ...otherProps } = this.props;
-
       return this.state.data.length < 1 ? (
         <h1>LOADING</h1>
       ) : (
